@@ -1,0 +1,124 @@
+body {
+    font-family: "Georgia", serif;
+    margin: 0;
+    padding: 0;
+    background: #fff7f2;
+    color: #4b2c2c;
+    line-height: 1.7;
+  }
+
+  header 
+  {
+    background: #e6cccc;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .logo 
+  {
+    max-width: 130px;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 3rem;
+    color: #8a4b4b;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  nav {
+    text-align: center;
+    background: #ffe4e1;
+    padding: 1rem;
+  }
+
+  nav a {
+    margin: 0 1.5rem;
+    text-decoration: none;
+    color: #6d3d3d;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  section h2 {
+    color: #8a4b4b;
+    margin-top: 0;
+    font-size: 2rem;
+    border-bottom: 2px solid #e5b1b1;
+    padding-bottom: 0.5rem;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+  }
+
+  .lightbox.active {
+    display: flex;
+  }
+
+  footer {
+    background: #e6cccc;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+
+    nav a {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  }

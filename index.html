@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klubíčko</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo Jana Chovancová" class="logo" />
+    <h1>Klubíčko</h1>
+    <p>Klubíčka, látky a radost z tvoření 🧶✂🧵</p>
+    <p>Masarykovo náměstí 168, Rožnov pod Radhoštěm | Po–Pá 9:00–17:00</p>
+  </header>
+
+  <section id="o-mne">
+    <h2>O mně</h2>
+    <p>Jmenuji se Jana Chovancová a miluji ruční práce – pletení, háčkování, šití i vyšívání. V mém obchůdku najdete klubíčka, bavlněné látky a hlavně osobní přístup. Každý kousek tvořím s radostí a láskou ke kreativnímu tvoření.</p>
+  </section>
+
+  <section id="nabidka">
+    <h2>Co u mě najdete</h2>
+    <ul>
+      <li>Ručně háčkované hračky a dekorace</li>
+      <li>Originální čepice, šály a doplňky</li>
+      <li>Bavlněné látky a klubíčka všech barev</li>
+      <li>Kurzy háčkování, pletení i vyšívání</li>
+      <li>Individuální zakázky dle přání zákazníků</li>
+    </ul>
+  </section>
+
+  <section id="galerie">
+    <h2>Moje výrobky</h2>
+    <div class="gallery">
+      <img src="/img/oblecek.png" alt="Ručně háčkovaná čepice">
+      <img src="/img/botickyhracka.png" alt="Pletená šála">
+      <img src="/img/vcelky.png" alt="Háčkovaná hračka">
+      <img src="/img/zajicek.png" alt="Bavlněné látky">
+      <img src="https://via.placeholder.com/300x300?text=Kurz" alt="Kurz háčkování">
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Telefon: <a href="tel:+420776625505">+420 776 625 505</a></p>
+    <p>Email: <a href="mailto:jan.chovancova@email.cz">jana.chovancova@email.cz</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/janinka.ch" target="_blank">@janinka.ch</a></p>
+    <p>Adresa: Masarykovo náměstí 168, Rožnov pod Radhoštěm</p>
+    <p>Otevřeno Po–Pá 9:00–17:00</p>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Zvětšený obrázek" id="lightbox-img" />
+  </div>
+
+  <footer>
+    &copy; 2025 Jan Chovancová | Všechna práva vyhrazena | Vyrobeno s láskou 🧶
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const galleryImages = document.querySelectorAll('.gallery img');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.classList.add('active');
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    });
+  </script>
+</body>
+</html>
