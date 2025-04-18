@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Klubíčko</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js"></script>
 </head>
 <body>
   <header>
@@ -58,22 +59,5 @@
     &copy; 2025 Jan Chovancová | Všechna práva vyhrazena | Vyrobeno s láskou 🧶
   </footer>
 
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const galleryImages = document.querySelectorAll('.gallery img');
-
-    galleryImages.forEach(img => {
-      img.addEventListener('click', () => {
-        lightbox.classList.add('active');
-        lightboxImg.src = img.src;
-      });
-    });
-
-    lightbox.addEventListener('click', () => {
-      lightbox.classList.remove('active');
-      lightboxImg.src = '';
-    });
-  </script>
 </body>
 </html>
